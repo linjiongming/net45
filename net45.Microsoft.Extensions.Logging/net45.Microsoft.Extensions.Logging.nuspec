@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>net45.Microsoft.Extensions.Logging</id>
+    <version>1.0.0</version>
+    <title>net45.Microsoft.Extensions.Logging</title>
+    <authors>jm</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
+    <description>Extend default EventId for ILogger</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2025</copyright>
+    <tags>net45 microsoft extensions logging logger eventid</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\net45.Microsoft.Extensions.Logging.dll" target="lib\net45" />
+  </files>
+</package>
