@@ -52,7 +52,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="net45.Microsoft.Extensions.Logging.1.0.0.nupkg" />
     <None Include="net45.Microsoft.Extensions.Logging.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
