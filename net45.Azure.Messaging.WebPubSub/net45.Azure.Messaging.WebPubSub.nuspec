@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>net45.Azure.Messaging.WebPubSub</id>
+    <version>1.1.1</version>
+    <title>net45.Azure.Messaging.WebPubSub</title>
+    <authors>jm</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/linjiongming/net45</projectUrl>
+    <description>Adapt Azure.Messaging.WebPubSub for net45</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2025</copyright>
+    <tags>net45 azure webpubsub websocket</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\net45.Azure.Messaging.WebPubSub.dll" target="lib\net45" />
+  </files>
+</package>

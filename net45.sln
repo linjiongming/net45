@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.35319.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.Microsoft.Extensions.Logging", "net45.Microsoft.Extensions.Logging\net45.Microsoft.Extensions.Logging.csproj", "{62A9FE89-11F8-4D68-B00A-7A8F8BDDE8B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.Azure.Messaging.WebPubSub", "net45.Azure.Messaging.WebPubSub\net45.Azure.Messaging.WebPubSub.csproj", "{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{62A9FE89-11F8-4D68-B00A-7A8F8BDDE8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62A9FE89-11F8-4D68-B00A-7A8F8BDDE8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62A9FE89-11F8-4D68-B00A-7A8F8BDDE8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
