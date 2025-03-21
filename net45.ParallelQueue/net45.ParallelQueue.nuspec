@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>net45.ParallelQueue</id>
+    <version>1.1.2</version>
+    <authors>jm</authors>
+    <owners>jm</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Inject ParallelQueue for net45</description>
+    <releaseNotes></releaseNotes>
+    <tags>net45 parallel queue</tags>
+    <serviceable>true</serviceable>
+    <dependencies>
+      <group targetFramework=".NETStandard1.1">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[1.1.1, )" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="[1.1.2, )" />
+        <dependency id="net45.Microsoft.Extensions.Logging" version="[1.1.2.1, )" />
+        <dependency id="NETStandard.Library" version="[1.6.1, )" />
+      </group>
+    </dependencies>
+    <copyright>Copyright 2025</copyright>
+    <projectUrl>https://github.com/linjiongming/net45</projectUrl>
+  </metadata>
+  <files>
+    <file src="bin\Release\net45.ParallelQueue.dll" target="lib\net45" />
+  </files>
+</package>

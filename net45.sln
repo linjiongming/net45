@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.NLog.Extensions.Loggi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.Microsoft.WindowsAzure.Storage", "net45.Microsoft.WindowsAzure.Storage\net45.Microsoft.WindowsAzure.Storage.csproj", "{8C821AA8-7F98-4B5B-8164-886C937AB6C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.ParallelQueue", "net45.ParallelQueue\net45.ParallelQueue.csproj", "{FA3A5599-B92A-4C32-8DCE-ECF1DC49EE29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8C821AA8-7F98-4B5B-8164-886C937AB6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C821AA8-7F98-4B5B-8164-886C937AB6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C821AA8-7F98-4B5B-8164-886C937AB6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA3A5599-B92A-4C32-8DCE-ECF1DC49EE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA3A5599-B92A-4C32-8DCE-ECF1DC49EE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA3A5599-B92A-4C32-8DCE-ECF1DC49EE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA3A5599-B92A-4C32-8DCE-ECF1DC49EE29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
