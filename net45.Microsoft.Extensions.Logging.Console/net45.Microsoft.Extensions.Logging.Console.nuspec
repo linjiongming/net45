@@ -8,7 +8,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <description>Add ConsoleLoggerProvider to ILoggerFactory</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes></releaseNotes>
     <tags>net45 microsoft extensions logging console</tags>
     <serviceable>true</serviceable>
     <dependencies>

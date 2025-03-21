@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>net45.Microsoft.WindowsAzure.Storage</id>
+    <version>1.1.1</version>
+    <authors>jm</authors>
+    <owners>jm</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Inject CloudBlobContainer for net45</description>
+    <releaseNotes></releaseNotes>
+    <tags>net45 microsoft windowsazure storage</tags>
+    <serviceable>true</serviceable>
+    <dependencies>
+      <group targetFramework=".NETStandard1.1">
+        <dependency id="Microsoft.Azure.KeyVault.Core" version="[1.0.0, )" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[1.1.1, )" />
+        <dependency id="Microsoft.WindowsAzure.Storage" version="[9.3.3, )" />
+        <dependency id="MimeKitLite" version="[2.15.1, )" />
+        <dependency id="Newtonsoft.Json" version="[10.0.2, )" />
+        <dependency id="NETStandard.Library" version="[1.6.1, )" />
+      </group>
+    </dependencies>
+    <copyright>Copyright 2025</copyright>
+    <projectUrl>https://github.com/linjiongming/net45</projectUrl>
+  </metadata>
+  <files>
+    <file src="bin\Release\net45.Microsoft.WindowsAzure.Storage.dll" target="lib\net45" />
+  </files>
+</package>
