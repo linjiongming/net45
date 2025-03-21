@@ -54,6 +54,7 @@
   <ItemGroup>
     <None Include="net45.Microsoft.Extensions.Logging.nuspec" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
