@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>net45.System.Data</id>
+    <id>net45.DbRepository</id>
     <version>1.1.2</version>
     <authors>jm</authors>
     <owners>jm</owners>
@@ -24,6 +24,6 @@
     <projectUrl>https://github.com/linjiongming/net45</projectUrl>
   </metadata>
   <files>
-    <file src="bin\Release\net45.System.Data.dll" target="lib\net45" />
+    <file src="bin\Release\net45.DbRepository.dll" target="lib\net45" />
   </files>
 </package>
