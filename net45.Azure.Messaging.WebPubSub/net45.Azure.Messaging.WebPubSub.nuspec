@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>net45.Azure.Messaging.WebPubSub</id>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <title>net45.Azure.Messaging.WebPubSub</title>
     <authors>jm</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -14,7 +14,10 @@
     <tags>net45 azure webpubsub websocket</tags>
     <dependencies>
       <group targetFramework=".NETStandard1.1">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[1.1.1, )" />
+        <dependency id="Microsoft.Extensions.Logging" version="[1.1.2, )" />
         <dependency id="Microsoft.Extensions.Logging.Abstractions" version="[1.1.2, )" />
+        <dependency id="net45.Microsoft.Extensions.Logging" version="[1.1.2.1, )" />
         <dependency id="NETStandard.Library" version="[1.6.1, )" />
       </group>
     </dependencies>
