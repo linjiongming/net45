@@ -70,6 +70,7 @@
   <ItemGroup>
     <None Include="net45.Microsoft.WindowsAzure.Storage.nuspec" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
