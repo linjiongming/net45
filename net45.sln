@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.Microsoft.Extensions.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.Azure.Messaging.WebPubSub", "net45.Azure.Messaging.WebPubSub\net45.Azure.Messaging.WebPubSub.csproj", "{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.Microsoft.Extensions.Hosting", "net45.Microsoft.Extensions.Hosting\net45.Microsoft.Extensions.Hosting.csproj", "{B716E0C3-E236-435D-AF87-69F7128E2E8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net45.Microsoft.Extensions.Logging.Console", "net45.Microsoft.Extensions.Logging.Console\net45.Microsoft.Extensions.Logging.Console.csproj", "{44258361-9479-44C0-8B87-A72C4B75ECC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A25D6E9F-AAE6-4C9A-9223-9FCA5DDA7EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B716E0C3-E236-435D-AF87-69F7128E2E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B716E0C3-E236-435D-AF87-69F7128E2E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B716E0C3-E236-435D-AF87-69F7128E2E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B716E0C3-E236-435D-AF87-69F7128E2E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44258361-9479-44C0-8B87-A72C4B75ECC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44258361-9479-44C0-8B87-A72C4B75ECC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44258361-9479-44C0-8B87-A72C4B75ECC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44258361-9479-44C0-8B87-A72C4B75ECC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
