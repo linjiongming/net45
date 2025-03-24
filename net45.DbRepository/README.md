@@ -2,7 +2,7 @@
 
 
 
-- App.config
+## App.config
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -15,7 +15,7 @@
 
 
 
-- Usage
+## Usage
 
 ```csha
 // DI
@@ -28,7 +28,7 @@ public class MyRepository : IDbRepository
 {
     private readonly IDbConnection _connection;
 
-    public AICAlertsRepository(IDbConnection connection)
+    public MyRepository(IDbConnection connection)
     {
         _connection = connection;
     }

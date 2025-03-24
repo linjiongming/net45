@@ -2,7 +2,7 @@
 
 
 
-- Usage
+## Usage
 
 ```csharp
 using Microsoft.WindowsAzure.Storage;

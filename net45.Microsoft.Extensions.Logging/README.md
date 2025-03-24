@@ -2,7 +2,7 @@
 
 
 
-- Usage
+## Usage
 
 ```csharp
 logger.LogError(ex, "Error executing {0}", nameof(MyService));

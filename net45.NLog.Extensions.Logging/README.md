@@ -2,7 +2,7 @@
 
 
 
-- Usage
+## Usage
 
 ```csharp
 builder.Logging.AddNLog();
@@ -10,7 +10,7 @@ builder.Logging.AddNLog();
 
 
 
-- NLog.config
+## NLog.config
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

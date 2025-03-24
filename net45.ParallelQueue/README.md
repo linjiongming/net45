@@ -2,7 +2,7 @@
 
 
 
-- Usage
+## Usage
 
 ```csharp
 using System.Collections.Concurrent;
@@ -11,9 +11,9 @@ using System.Collections.Concurrent;
 services.AddParallelQueue<MyModel>(10);
 
 
-private readonly AddParallelQueue<MyModel> _myQueue;
+private readonly ParallelQueue<MyModel> _myQueue;
 
-ctor(AddParallelQueue<MyModel> myQueue)
+ctor(ParallelQueue<MyModel> myQueue)
 {
     _myQueue = myQueue;
     _myQueue.DequeueAsync += MyQueue_DequeueAsync;
