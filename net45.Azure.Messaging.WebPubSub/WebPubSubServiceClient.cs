@@ -16,7 +16,7 @@ namespace Azure.Messaging.WebPubSub
         private readonly string _hubName;
         private readonly string _getUrlApi;
         private readonly HttpClient _httpClient;
-        private readonly SemaphoreSlim _startStopSemaphore = new SemaphoreSlim(1, 1);
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
         private ClientWebSocket _webSocket;
         private CancellationTokenSource _cts;
@@ -37,22 +37,39 @@ namespace Azure.Messaging.WebPubSub
 
         protected async Task<ClientWebSocket> GetWebSocketAsync(CancellationToken cancellation = default(CancellationToken))
         {
-            if (_webSocket == null)
+            bool releaseGuard = false;
+            try
             {
-                _webSocket = new ClientWebSocket();
-                _webSocket.Options.AddSubProtocol(SubProtocol);
-            }
-            if (_webSocket.State != WebSocketState.Open && _webSocket.State != WebSocketState.Connecting)
-            {
-                _webSocket.Dispose();
-                _webSocket = new ClientWebSocket();
-                _webSocket.Options.AddSubProtocol(SubProtocol);
-                using (HttpResponseMessage response = await _httpClient.GetAsync(_getUrlApi, cancellation))
+                await _semaphore.WaitAsync(cancellation).ConfigureAwait(false);
+                releaseGuard = true;
+                if (_webSocket == null)
                 {
-                    response.EnsureSuccessStatusCode();
-                    string url = await response.Content.ReadAsStringAsync();
-                    cancellation.ThrowIfCancellationRequested();
-                    await _webSocket.ConnectAsync(new Uri(url), cancellation);
+                    _webSocket = new ClientWebSocket();
+                    _webSocket.Options.AddSubProtocol(SubProtocol);
+                }
+                if (_webSocket.State != WebSocketState.Open && _webSocket.State != WebSocketState.Connecting)
+                {
+                    _webSocket.Dispose();
+                    _webSocket = new ClientWebSocket();
+                    _webSocket.Options.AddSubProtocol(SubProtocol);
+                    using (HttpResponseMessage response = await _httpClient.GetAsync(_getUrlApi, cancellation))
+                    {
+                        response.EnsureSuccessStatusCode();
+                        string url = await response.Content.ReadAsStringAsync();
+                        cancellation.ThrowIfCancellationRequested();
+                        await _webSocket.ConnectAsync(new Uri(url), cancellation);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting WebSocket");
+            }
+            finally
+            {
+                if (releaseGuard)
+                {
+                    _semaphore.Release();
                 }
             }
             return _webSocket;
@@ -110,7 +127,7 @@ namespace Azure.Messaging.WebPubSub
             bool releaseGuard = false;
             try
             {
-                await _startStopSemaphore.WaitAsync(cancellation).ConfigureAwait(false);
+                await _semaphore.WaitAsync(cancellation).ConfigureAwait(false);
                 releaseGuard = true;
                 if (_receiveTask == null)
                 {
@@ -126,7 +143,7 @@ namespace Azure.Messaging.WebPubSub
             {
                 if (releaseGuard)
                 {
-                    _startStopSemaphore.Release();
+                    _semaphore.Release();
                 }
             }
         }
@@ -151,10 +168,8 @@ namespace Azure.Messaging.WebPubSub
         {
             if (string.IsNullOrWhiteSpace(group)) throw new ArgumentNullException("group");
             if (string.IsNullOrWhiteSpace(data)) throw new ArgumentNullException("data");
-            ClientWebSocket ws = await GetWebSocketAsync(cancellation);
             string json = JsonConvert.SerializeObject(new { type = "sendToGroup", group, data });
-            ArraySegment<byte> buffer = new ArraySegment<byte>(Encoding.UTF8.GetBytes(json));
-            await ws.SendAsync(buffer, WebSocketMessageType.Text, true, cancellation);
+            await SendAsync(json, cancellation);
         }
 
         public async Task StopAsync(CancellationToken cancellation = default(CancellationToken))
@@ -162,7 +177,7 @@ namespace Azure.Messaging.WebPubSub
             bool releaseGuard = false;
             try
             {
-                await _startStopSemaphore.WaitAsync(cancellation).ConfigureAwait(false);
+                await _semaphore.WaitAsync(cancellation).ConfigureAwait(false);
                 releaseGuard = true;
                 if (_cts != null)
                 {
@@ -192,7 +207,7 @@ namespace Azure.Messaging.WebPubSub
             {
                 if (releaseGuard)
                 {
-                    _startStopSemaphore.Release();
+                    _semaphore.Release();
                 }
             }
         }
