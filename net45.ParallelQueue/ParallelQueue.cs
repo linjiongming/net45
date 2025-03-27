@@ -44,7 +44,7 @@ namespace System.Collections.Concurrent
                         Parallel.ForEach(
                             _collection.GetConsumingPartitioner(),
                             _options,
-                            async item => await DequeueAsync(item, stoppingToken));
+                            async item => await DequeueAsync?.Invoke(item, stoppingToken));
                     }
                 }
                 catch (OperationCanceledException) { /*ignore*/ }
