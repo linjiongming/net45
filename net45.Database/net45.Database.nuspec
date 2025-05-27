@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>net45.Database</id>
+    <version>1.1.1</version>
+    <title>net45.Database</title>
+    <authors>jm</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/linjiongming/net45</projectUrl>
+    <description>
+      Injection `IDatabase` from connectionStrings in app.config.
+      Auto inject types implementing `IRepository`.
+    </description>
+    <readme>README.md</readme>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2025</copyright>
+    <tags>net45 database connection repository</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard1.1">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[1.1.1, )" />
+        <dependency id="NETStandard.Library" version="[1.6.1, )" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[1.1.1, )" />
+        <dependency id="NETStandard.Library" version="[1.6.1, )" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration"  />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="README.md" target="" />
+    <file src="bin\Release\net45.Database.dll" target="lib\net45" />
+  </files>
+</package>

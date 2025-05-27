@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("net45.DbRepository")]
+[assembly: AssemblyTitle("net45.Database")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("net45.DbRepository")]
+[assembly: AssemblyProduct("net45.Database")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("b86e2a50-24cc-408a-a5ed-c5d0d00a5a1a")]
+[assembly: Guid("f6fa0b7f-a110-4500-ab0d-ec6e40dadd61")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
