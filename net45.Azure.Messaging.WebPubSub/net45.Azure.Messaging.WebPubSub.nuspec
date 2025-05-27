@@ -22,6 +22,14 @@
         <dependency id="NETStandard.Library" version="[1.6.1, )" />
         <dependency id="Newtonsoft.Json" version="[13.0.3, )" />
       </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[1.1.1, )" />
+        <dependency id="Microsoft.Extensions.Logging" version="[1.1.2, )" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="[1.1.2, )" />
+        <dependency id="net45.Microsoft.Extensions.Logging" version="[1.1.2.1, )" />
+        <dependency id="NETStandard.Library" version="[1.6.1, )" />
+        <dependency id="Newtonsoft.Json" version="[13.0.3, )" />
+      </group>
     </dependencies>
   </metadata>
   <files>
