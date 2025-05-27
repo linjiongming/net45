@@ -79,7 +79,24 @@ namespace Azure.Messaging.WebPubSub
         {
             ArraySegment<byte> buffer = new ArraySegment<byte>(Encoding.UTF8.GetBytes(content));
             ClientWebSocket ws = await GetWebSocketAsync(cancellation);
-            await ws.SendAsync(buffer, WebSocketMessageType.Text, true, cancellation);
+            bool releaseGuard = false;
+            try
+            {
+                await _semaphore.WaitAsync(cancellation).ConfigureAwait(false);
+                releaseGuard = true;
+                await ws.SendAsync(buffer, WebSocketMessageType.Text, true, cancellation);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error sending");
+            }
+            finally
+            {
+                if (releaseGuard)
+                {
+                    _semaphore.Release();
+                }
+            }
         }
 
         protected async Task CircularReceiveAsync(CancellationToken cancellation = default(CancellationToken))
@@ -164,11 +181,11 @@ namespace Azure.Messaging.WebPubSub
             _logger.LogInformation($"Leave group[{group}]");
         }
 
-        public async Task SendToGroupAsync(string group, string data, CancellationToken cancellation = default(CancellationToken))
+        public async Task SendToGroupAsync(string group, string data, bool noEcho = true, CancellationToken cancellation = default(CancellationToken))
         {
             if (string.IsNullOrWhiteSpace(group)) throw new ArgumentNullException("group");
             if (string.IsNullOrWhiteSpace(data)) throw new ArgumentNullException("data");
-            string json = JsonConvert.SerializeObject(new { type = "sendToGroup", group, data });
+            string json = JsonConvert.SerializeObject(new { type = "sendToGroup", group, data, noEcho });
             await SendAsync(json, cancellation);
         }
 

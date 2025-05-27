@@ -2,13 +2,14 @@
 <package >
   <metadata>
     <id>net45.Azure.Messaging.WebPubSub</id>
-    <version>1.1.2</version>
+    <version>1.1.2.1</version>
     <title>net45.Azure.Messaging.WebPubSub</title>
     <authors>jm</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/linjiongming/net45</projectUrl>
     <description>Adapt Azure.Messaging.WebPubSub for net45</description>
+    <readme>README.md</readme>
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2025</copyright>
     <tags>net45 azure webpubsub websocket</tags>
@@ -19,10 +20,12 @@
         <dependency id="Microsoft.Extensions.Logging.Abstractions" version="[1.1.2, )" />
         <dependency id="net45.Microsoft.Extensions.Logging" version="[1.1.2.1, )" />
         <dependency id="NETStandard.Library" version="[1.6.1, )" />
+        <dependency id="Newtonsoft.Json" version="[13.0.3, )" />
       </group>
     </dependencies>
   </metadata>
   <files>
+    <file src="README.md" target="" />
     <file src="bin\Release\net45.Azure.Messaging.WebPubSub.dll" target="lib\net45" />
   </files>
 </package>
